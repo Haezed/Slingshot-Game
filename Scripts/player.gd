@@ -39,4 +39,4 @@ func _physics_process(delta):
 func _draw():
 	if is_dragging:
 		var current_mouse_position = get_global_mouse_position()
-		draw_line(to_local(drag_start_position), to_local(current_mouse_position), Color.white, 2)
+		draw_line(to_local(drag_start_position), to_local(current_mouse_position), Color.WHITE, 2)
