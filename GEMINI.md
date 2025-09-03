@@ -100,3 +100,5 @@ Keep an eye on the "Output" and "Errors" tabs at the bottom of the Godot editor.
 ### 4. Use the Remote Scene Tree
 
 When your game is running, the "Remote" tab above the scene tree shows the live scene tree of your running game. You can select nodes in the remote tree and inspect their properties in the "Inspector" in real-time.
+
+- Do not edit the project.godot if something has to be done in the editor please give me step by step instructions on how to accomplish the task using the Godot Documentation. I will then complete the steps and let you know when i have completed the task.
