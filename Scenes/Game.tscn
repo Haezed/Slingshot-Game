@@ -7,12 +7,6 @@
 
 [node name="Player" parent="." instance=ExtResource("1_hdh82")]
 position = Vector2(-87, 1)
-speed = null
-air_strafe_speed = null
-min_jump_force = null
-max_jump_force = null
-charge_time = null
-gravity = null
 
 [node name="Level" parent="." instance=ExtResource("2_isktw")]
 position = Vector2(-13, 37)

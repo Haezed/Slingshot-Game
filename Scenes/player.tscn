@@ -44,12 +44,6 @@ radius = 5.09902
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_d4kk5")
-speed = null
-air_strafe_speed = null
-min_jump_force = null
-max_jump_force = null
-charge_time = null
-gravity = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -12)

@@ -11,6 +11,9 @@ extends CharacterBody2D
 # Maximum slingshot distance
 @export var max_slingshot_distance = 200
 
+# Friction
+@export var friction = 1000
+
 var is_dragging = false
 var drag_start_position = Vector2.ZERO
 var drag_end_position = Vector2.ZERO
@@ -33,6 +36,10 @@ func _physics_process(delta):
 	# Apply gravity
 	if not is_on_floor():
 		velocity.y += gravity * delta
+
+	# Apply friction
+	if is_on_floor():
+		velocity.x = move_toward(velocity.x, 0, friction * delta)
 
 	move_and_slide()
 
