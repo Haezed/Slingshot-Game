@@ -9,7 +9,7 @@ extends CharacterBody2D
 @export var slingshot_power = 1000
 
 # Maximum slingshot distance
-@export var max_slingshot_distance = 200
+@export var max_slingshot_distance = 100
 
 # Friction
 @export var friction = 1000
