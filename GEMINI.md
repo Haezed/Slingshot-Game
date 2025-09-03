@@ -6,7 +6,7 @@ This file provides a comprehensive guide for developing the Slingshot Rage Game,
 
 **Slingshot Rage Game** is a 2D platformer where the player controls a character that must be slingshotted up a challenging map. The game is inspired by difficult platformers like Jump King and Pogostuck, with a focus on precision and perseverance.
 
-*   **Engine:** Godot 4.2
+*   **Engine:** Godot 4.4
 *   **Language:** GDScript
 *   **Target Platform:** Mobile
 
