@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dy5220ui2gour"]
 
-[ext_resource type="Script" path="res://Scripts/player.gd" id="1_d4kk5"]
+[ext_resource type="Script" uid="uid://hn8ucj0eblq" path="res://Scripts/player.gd" id="1_d4kk5"]
 [ext_resource type="Texture2D" uid="uid://dl3rdakbq3qgi" path="res://Assets/brackeys_platformer_assets/sprites/knight.png" id="1_kmv2l"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fyhwt"]
@@ -55,3 +55,5 @@ frame_progress = 0.739999
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -6)
 shape = SubResource("CircleShape2D_uqw72")
+
+[node name="Camera2D" type="Camera2D" parent="."]
