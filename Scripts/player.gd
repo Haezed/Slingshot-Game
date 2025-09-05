@@ -35,6 +35,7 @@ func _unhandled_input(event):
 
 	if Input.is_action_just_pressed("rewind"):
 		position = last_safe_position
+		velocity = Vector2.ZERO
 
 func _physics_process(delta):
 	# Apply gravity
