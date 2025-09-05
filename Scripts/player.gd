@@ -33,17 +33,18 @@ func _unhandled_input(event):
 				var force = clamp(distance, 0, max_slingshot_distance) / max_slingshot_distance * slingshot_power
 				velocity = direction * force
 
+func _physics_process(delta):
+	# Handle rewind
 	if Input.is_action_just_pressed("rewind"):
 		position = last_safe_position
 		velocity = Vector2.ZERO
 
-func _physics_process(delta):
 	# Apply gravity
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	else:
-		# Store the last safe position when on the floor and not moving
-		if velocity.x == 0:
+		# Store the last safe position when on the floor and not dragging
+		if not is_dragging:
 			last_safe_position = position
 
 	# Apply friction
