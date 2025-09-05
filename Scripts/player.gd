@@ -17,6 +17,7 @@ extends CharacterBody2D
 var is_dragging = false
 var drag_start_position = Vector2.ZERO
 var drag_end_position = Vector2.ZERO
+var last_safe_position = Vector2.ZERO
 
 func _unhandled_input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
@@ -32,10 +33,17 @@ func _unhandled_input(event):
 				var force = clamp(distance, 0, max_slingshot_distance) / max_slingshot_distance * slingshot_power
 				velocity = direction * force
 
+	if Input.is_action_just_pressed("rewind"):
+		position = last_safe_position
+
 func _physics_process(delta):
 	# Apply gravity
 	if not is_on_floor():
 		velocity.y += gravity * delta
+	else:
+		# Store the last safe position when on the floor and not moving
+		if velocity.x == 0:
+			last_safe_position = position
 
 	# Apply friction
 	if is_on_floor():

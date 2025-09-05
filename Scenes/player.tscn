@@ -44,7 +44,8 @@ radius = 5.09902
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_d4kk5")
-max_slingshot_distance = 85
+slingshot_power = 700
+max_slingshot_distance = 80
 friction = 6000
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
