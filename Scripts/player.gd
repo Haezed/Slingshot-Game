@@ -25,6 +25,7 @@ func _unhandled_input(event):
 		if event.pressed and state == IDLE:
 			state = DRAGGING
 			drag_start_position = get_global_mouse_position()
+			last_safe_position = position
 		else:
 			if state == DRAGGING:
 				state = JUMPING
@@ -37,8 +38,6 @@ func _unhandled_input(event):
 func _physics_process(delta):
 	match state:
 		IDLE:
-			# Store the last safe position when on the floor and not moving
-			last_safe_position = position
 			# Apply friction
 			velocity.x = move_toward(velocity.x, 0, friction * delta)
 			if not is_on_floor():
